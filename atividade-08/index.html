@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 08</title>
+</head>
+<style>
+    input {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-bottom: 6px;
+    }
+    
+    span {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+    
+    p {
+        margin: 0px;
+    }
+    
+    body {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .questao {
+        background-color: #e0f7faa1;
+        padding: 1px 0px 10px 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    
+    .questao:hover {
+        background-color: #e0f7fa;
+    }
+    
+    input[type=button] {
+        margin-top: 10px;
+    }
+</style>
+<script>
+    // question1
+    function calcMedia() {
+        //The parseFloat() function parses an argument (converting it to a string first if needed) and returns a floating point number.
+        var nota1 = parseFloat(document.getElementById('nota1').value);
+        var nota2 = parseFloat(document.getElementById('nota2').value);
+        var nota3 = parseFloat(document.getElementById('nota3').value);
+
+        // to calc Weighted average
+        var media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / (2 + 3 + 5);
+
+        // to replace content HTML
+        document.getElementById("media").innerHTML = media.toFixed(1);
+    }
+
+    //question2 
+
+    function checkPassword() {
+        var password = document.getElementById('password').value;
+        //creat condition 
+        if (password == '2002') {
+            document.getElementById('result').innerHTML = "Acesso Permitido"
+        } else {
+            document.getElementById('result').innerHTML = "Senha Inválida"
+        }
+
+
+    }
+
+    // question3
+
+
+
+    function rangeNumbers() {
+        var number = parseFloat(document.getElementById('number').value);
+
+        // creat condition 
+        if (number >= 0 && number <= 25) {
+            changeContent("Intervalo [0,25]")
+        } else if (number >= 25 && number <= 50) {
+            changeContent("Intervalo [25,50]")
+        } else if (number >= 50 && number <= 75) {
+            changeContent("Intervalo 50,75]")
+        } else if (number >= 50 && number <= 100) {
+            changeContent("Intervalo [25,50]")
+        } else {
+            changeContent("Fora de Intervalo")
+        }
+
+
+    }
+    // function to change content
+    function changeContent(content) {
+        document.getElementById('value_result').innerHTML = content
+    }
+
+
+    //question4 
+
+
+    function newSalary() {
+        var salary = parseFloat(document.getElementById('salary').value);
+        var percentage;
+        if (salary >= 0 && salary <= 400.00) {
+            percentage = 0.15
+            calcSalary()
+        } else if (salary >= 400.01 && salary <= 800.00) {
+            percentage = 0.12
+            calcSalary()
+        } else if (salary >= 800.01 && salary <= 1200.00) {
+            percentage = 0.10
+            calcSalary()
+        } else if (salary >= 800.01 && salary <= 1200.00) {
+            percentage = 0.10
+            calcSalary()
+        } else if (salary >= 800.01 && salary <= 2000.00) {
+            percentage = 0.7
+            calcSalary()
+        } else if (salary > 2000.00) {
+            percentage = 0.4
+            calcSalary()
+        }
+
+
+
+
+        function calcSalary() {
+            var gain = salary * percentage
+            var newSalary = salary + gain
+
+            document.getElementById('new_salary').innerHTML = newSalary.toFixed(2)
+
+            document.getElementById('gain').innerHTML = gain.toFixed(2)
+
+            document.getElementById('percentage').innerHTML = percentage
+        }
+    }
+
+    //question5
+
+    function taxes() {
+        var salaryT = parseFloat(document.getElementById('salary_taxes').value)
+        var percentageT;
+        if (salaryT >= 0 && salaryT <= 200.00) {
+            document.getElementById('salary_taxes').innerHTML = "Isento"
+        } else if (salaryT >= 200.01 && salaryT <= 300.00) {
+            percentageT = 0.8
+
+            calcTaxes()
+        } else if (salaryT >= 300.01 && salaryT <= 2000.00) {
+            percentageT = 0.18
+            calcTaxes()
+        } else if (salaryT > 4500.00) {
+            percentageT = 0.28
+            calcTaxes()
+        }
+
+        function calcTaxes() {
+            var taxes = salaryT * percentageT
+            document.getElementById('tax').innerHTML = taxes
+        }
+
+    }
+    //question6 
+    function calcEmployee() {
+        var name = document.getElementById('nomeFuncionario').value;
+        var hourRate = parseFloat(document.getElementById('hourRate').value);
+        var hours = parseFloat(document.getElementById('hours').value);
+        var salary_employee = hourRate * hours
+
+        document.getElementById('name_employee').innerHTML = name;
+        document.getElementById('salary_employee').innerHTML = salary_employee;
+    }
+
+    //question7
+    function calcAvarage() {
+        var total_distance = parseFloat(document.getElementById('total_distance').value);
+        var full = parseFloat(document.getElementById('full').value);
+        var average = total_distance / full
+        document.getElementById('average').innerHTML = average.toFixed(3) + ' km/l'
+    }
+</script>
+
+<body>
+    <div id="corpo">
+        <div class="questao">
+            <h1>Questão 01:<span>Calcular a média ponderada de 3 notas
+                    <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado: A média das 3 notas foi <span id="media">XX</span></p>
+            <label for="">Nota 01:</label>
+            <input type="text" id="nota1">
+            <label for="">Nota 02:</label>
+            <input type="text" id="nota2">
+            <label for="">Nota 03:</label>
+            <input type="text" id="nota3">
+            <input onclick="calcMedia()" type="button" value="Calcular">
+        </div>
+        <div class="questao">
+            <h1>Questão 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="result">Resultado: xxxxx</p>
+            <label for="">Digite a senha:</label>
+            <input type="password" id="password">
+            <input onclick="checkPassword()" type="button" value="Validar">
+        </div>
+        <div class="questao">
+            <h1>Questão 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1037"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado: O valor digita esta no intervalo <span id="value_result">[xx,xx]</span></p>
+            <label for="">Valor:</label>
+            <input type="text" id="number">
+            <input onclick="rangeNumbers()" type="button" value="Validar">
+        </div>
+        <div class="questao">
+
+            <h1>Questão 04:<span> Aumento de Salário <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1048"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado: Novo salario: <span id="new_salary">xx.xx</span> , Ganho: <span id="gain">xx.xx</span> , Percentual: <span id="percentage">xx%</span> </p>
+            <label for="">Salário atual:</label>
+            <input type="text" id="salary">
+            <input onclick="newSalary()" type="button" value="Calcular">
+        </div>
+        <div class="questao">
+            <h1>Questão 05:<span> Imposto de Renda <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1051"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado:Imposto <span id="tax">xxxxx</span></p>
+            <label for="">Renda:</label>
+            <input type="text" id="salary_taxes">
+            <input onclick="taxes()" type="button" value="Calcular">
+        </div>
+        <div class="questao">
+            <h1>Questão 06:<span> Calcular o salário de um funcionário <a
+                        href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado: O funcionario <span id="name_employee">xxx</span> vai receber <span id="salary_employee">xxx</span> </p>
+            <label for="">Nome Funcionário</label>
+            <input type="text" id="nomeFuncionario">
+            <label for="">Valor Hora</label>
+            <input type="text" id="hourRate">
+            <label for="">Total de Horas Trabalhado</label>
+            <input type="text" id="hours">
+            <input onclick="calcAvarage()" type="button" value="Calcular">
+        </div>
+        <div class="questao">
+            <h1>Questão 07:<span> Calcular o consumo médio de um automóvel <a
+                        href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado: O automóvel fez o consumo médio de <span id="average">xxx</span></p>
+            <label for="">Distância percorrida</label>
+            <input type="text" id="total_distance">
+            <label for="">Combustível gasto</label>
+            <input type="text" id="full">
+            <input onclick="calcAvarage()" type="button" value="Calcular">
+        </div>
+    </div>
+</body>
+
+</html>
