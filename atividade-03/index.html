@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <form action="pagina/login.html" method="GET">
+        <fieldset style="width: 600px; padding-left: 150px; padding-bottom: 50px;">
+            <legend>Dados Pessoais</legend>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="name" id="name" required/>
+                <label for="name" class="form__label">Nome</label>
+            </div>
+            <div class="form__group field">
+                <input type="email" class="form__field" placeholder="Email" name="email" id="email" required/>
+                <label for="email" class="form__label">E-mail</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Cel" name="cel" id="cel" pattern="[0-9]+$" required/>
+                <label for="cel" class="form__label">Celular</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Endereco" name="endereco" id="endereco" required/>
+                <label for="endereco" class="form__label">Endereço</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Cep" name="cep" id="cep" maxlength="8" pattern="[0-9]+$" required/>
+                <label for="cep" class="form__label">Cep</label>
+            </div>
+            <div class="form__group field">
+                <input type="date" class="form__field" placeholder="DataNasc" name="dataNasc" id="dataNasc" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" max="2004-01-01" required/>
+                <label for="dataNasc" class="form__label">Data de Nascimento</label>
+            </div>
+        </fieldset>
+        <fieldset style="width: 600px; padding-left: 150px; padding-bottom: 50px;">
+            <legend>Dados Escolares</legend>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Curso1" name="curso1" id="curso1" required/>
+                <label for="curso1" class="form__label">Nome do Curso 1</label>
+            </div>
+            <div class="form__group field">
+                <input type="time" class="form__field" placeholder="Horas" name="horas" id="horas" required/>
+                <label for="horas" class="form__label">Horas</label>
+            </div>
+            <div class="form__group field">
+                <input type="month" class="form__field" placeholder="Conculusao1" name="conculusao1" id="conculusao1" min="2015-02" required/>
+                <label for="conculusao1" class="form__label">Mês/Ano de conclusão</label>
+            </div>
+            <br>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Curso2" name="curso2" id="curso2" required/>
+                <label for="curso2" class="form__label">Nome do Curso 2</label>
+            </div>
+            <div class="form__group field">
+                <input type="time" class="form__field" placeholder="Horas2" name="horas2" id="horas2" required/>
+                <label for="horas2" class="form__label">Horas</label>
+            </div>
+            <div class="form__group field">
+                <input type="month" class="form__field" placeholder="Conculusao2" name="conculusao2" id="conculusao1" min="2015-02" required/>
+                <label for="conculusao2" class="form__label">Mês/Ano de conclusão</label>
+            </div>
+            <br>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Curso3" name="curso3" id="curso3" required/>
+                <label for="curso3" class="form__label">Nome do Curso 3</label>
+            </div>
+            <div class="form__group field">
+                <input type="time" class="form__field" placeholder="Horas3" name="horas3" id="horas3" required/>
+                <label for="horas3" class="form__label">Horas</label>
+            </div>
+            <div class="form__group field">
+                <input type="month" class="form__field" placeholder="Conculusao3" name="conculusao3" id="conculusao1" min="2015-02" required/>
+                <label for="conculusao3" class="form__label">Mês/Ano de conclusão</label>
+            </div>
+
+        </fieldset>
+        <fieldset style="width: 600px; padding-left: 150px; padding-bottom: 50px;">
+            <legend>Dados Profissionais</legend>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="NomeEmpr1" name="nameEmpr1" id="nameEmpr1" required/>
+                <label for="nameEmpr1" class="form__label">Nome da Empresa 1 </label>
+            </div>
+            <div class="form__group field">
+                <label for="current">Atual? (Sim/Não)</label><br>
+                <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                </select>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="TempTrab1" name="tempTrab1" id="tempTrab1" required/>
+                <label for="tempTrab1" class="form__label">Tempo de trabalho</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Cargo1" name="cargo1" id="cargo1" required/>
+                <label for="cargo1" class="form__label">Cargo</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Desc1" name="desc1" id="desc1" required/>
+                <label for="desc1" class="form__label">Descrição das atividades</label>
+            </div>
+            <br><br>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="NomeEmpr2" name="nameEmpr2" id="nameEmpr2" required/>
+                <label for="nameEmpr2" class="form__label">Nome da Empresa 2 </label>
+            </div>
+            <div class="form__group field">
+                <label for="current">Atual? (Sim/Não)</label><br>
+                <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                </select>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="TempTrab2" name="tempTrab2" id="tempTrab2" required/>
+                <label for="tempTrab2" class="form__label">Tempo de trabalho</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Cargo2" name="cargo2" id="cargo2" required/>
+                <label for="cargo2" class="form__label">Cargo</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Desc2" name="desc2" id="desc2" required/>
+                <label for="desc1" class="form__label">Descrição das atividades</label>
+            </div>
+            <br><br>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="NomeEmpr3" name="nameEmpr3" id="nameEmpr3" required/>
+                <label for="nameEmpr3" class="form__label">Nome da Empresa 3 </label>
+            </div>
+            <div class="form__group field">
+                <label for="current">Atual? (Sim/Não)</label><br>
+                <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                </select>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="TempTrab3" name="tempTrab3" id="tempTrab3" required/>
+                <label for="tempTrab3" class="form__label">Tempo de trabalho</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Cargo3" name="cargo3" id="cargo3" required/>
+                <label for="cargo3" class="form__label">Cargo</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Desc3" name="desc3" id="desc3" required/>
+                <label for="desc3" class="form__label">Descrição das atividades</label>
+            </div>
+        </fieldset><br><br>
+        <label for="check">
+            <input type="checkbox" name="check" id="check">
+            Autorizando usar os dados e o botão SALVAR
+        </label><br><br>
+        <input type="submit" value="Salvar">
+
+    </form>
+
+</body>
+
+</html>

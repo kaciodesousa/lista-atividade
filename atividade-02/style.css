@@ -1,0 +1,46 @@
+body {
+    margin: 15px 15px;
+    /* background-image: url("Novel_Coronavirus_SARS-CoV-2.jpg"); */
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.texto {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.subtitulo {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mark1 {
+    background-color: yellow;
+}
+
+.mark2 {
+    background-color: green;
+}
+
+.mark3 {
+    background-color: red;
+}
+
+.mark4 {
+    background-color: blue;
+}
+
+.mark5 {
+    background-color: purple;
+}

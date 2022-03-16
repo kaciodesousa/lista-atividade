@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="page-form.css" />
+    <link rel="stylesheet" href="form.css">
+    <title>Atividade 03</title>
+</head>
+
+<body id="page-form">
+    <div id="container">
+        <main>
+            <form action="" method="post" autocomplete="on" id="create-class">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="input-block">
+                        <label for="full-name">Nome Completo: *</label>
+                        <input type="text" name="full-name" id="full-name" maxlength="100" autofocus required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="email">E-mail: *</label>
+                        <input type="email" name="email" id="email" placeholder="Ex.: marcio@gmail.com.br" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+
+                    </div>
+
+                    <div class="input-block">
+                        <label for="phone-number">Celular: *</label>
+                        <input type="number" name="phone-number" id="phone-number" pattern="[0-9]+$" required />
+                    </div>
+
+
+                    <div class="input-block">
+                        <label for="address">Endereço: </label>
+                        <input type="text" name="address" id="address" />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="zip-code">CEP: </label>
+                        <input type="text" name="zip-code" id="zip-code" maxlength="8" pattern="[0-9]+$" />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="birthday">Data de nascimento: </label>
+                        <input type="date" id="birthday" name="birthday" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" max="2004-01-01" />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados Escolares</legend>
+
+                    <div class="input-block">
+                        <label for="course-name">Nome do Curso 1: *</label>
+                        <input type="text" name="course-name" id="course-name" required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="hours">Horas: *</label>
+                        <input type="text" name="hours" id="hours" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="finish-year">Mês / Ano de conclusão: *</label>
+                        <input type="month" name="finish-year" id="finish-year" min="2015-02" required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="course-name">Nome do Curso 2: *</label>
+                        <input type="text" name="course-name" id="course-name" required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="hours">Horas: *</label>
+                        <input type="text" name="hours" id="hours" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="finish-year">Mês / Ano de conclusão: *</label>
+                        <input type="month" name="finish-year" id="finish-year" min="2015-02" required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="course-name">Nome do Curso 3: *</label>
+                        <input type="text" name="course-name" id="course-name" required />
+                    </div>
+
+                    <div class="input-block">
+                        <label for="hours">Horas: *</label>
+                        <input type="text" name="hours" id="hours" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="finish-year">Mês / Ano de conclusão: *</label>
+                        <input type="month" name="finish-year" id="finish-year" min="2015-02" required />
+                    </div>
+
+                </fieldset>
+
+                <!-- Campo Dados Profissionais -->
+                <fieldset>
+                    <legend>Dados Profissionais</legend>
+
+                    <div class="input-block">
+                        <label for="company-name">Nome da Empresa 1: *</label>
+                        <input type="text" name="company-name" id="company-name" required />
+                    </div>
+                    <br>
+
+                    <div class="select-block">
+                        <label for="current">Atual? (Sim/Não): *</label>
+                        <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                    </select>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="work-time">Tempo de trabalho: *</label>
+                        <input type="text" name="work-time" id="work-time" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="office">Cargo: </label>
+                        <input type="text" name="office" id="office" pattern="[a-z\s]+$" />
+                    </div>
+
+                    <div class="textarea-block">
+                        <label for="desc-activities">Descrição das atividades:</label>
+                        <textarea name="desc-activities" id="desc-activities" cols="30" rows="10" style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="company-name">Nome da Empresa 2: *</label>
+                        <input type="text" name="company-name" id="company-name" required />
+                    </div>
+                    <br>
+
+                    <div class="select-block">
+                        <label for="current">Atual? (Sim/Não): *</label>
+                        <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                    </select>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="work-time">Tempo de trabalho: *</label>
+                        <input type="text" name="work-time" id="work-time" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="office">Cargo: </label>
+                        <input type="text" name="office" id="office" pattern="[a-z\s]+$" />
+                    </div>
+
+                    <div class="textarea-block">
+                        <label for="desc-activities">Descrição das atividades:</label>
+                        <textarea name="desc-activities" id="desc-activities" cols="30" rows="10" style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="company-name">Nome da Empresa 3: *</label>
+                        <input type="text" name="company-name" id="company-name" required />
+                    </div>
+                    <br>
+
+                    <div class="select-block">
+                        <label for="current">Atual? (Sim/Não): *</label>
+                        <select name="current" id="current">
+                        <option value="sim">Não</option>
+                        <option value="nao" selected>Sim</option>
+                    </select>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="work-time">Tempo de trabalho: *</label>
+                        <input type="text" name="work-time" id="work-time" required/>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="office">Cargo: </label>
+                        <input type="text" name="office" id="office" pattern="[a-z\s]+$" />
+                    </div>
+
+                    <div class="textarea-block">
+                        <label for="desc-activities">Descrição das atividades:</label>
+                        <textarea name="desc-activities" id="desc-activities" cols="30" rows="10" style="resize: none;"></textarea>
+                    </div>
+
+
+                </fieldset>
+
+                <label class="terms">
+                <p>Concorda com o envio dos seus dados para nosso sistema?</p>
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            </form>
+
+            <footer>
+                <p><br>
+                    <img src="img/warning.svg" alt="Aviso importante"> Importante! <br>Preencha todos os dados</p>
+
+                <button type="submit" form="create-class">Salvar</button>
+            </footer>
+        </main>
+
+    </div>
+</body>
+
+</html>
