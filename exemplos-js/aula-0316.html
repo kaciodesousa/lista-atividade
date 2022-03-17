@@ -21,6 +21,7 @@
     <button onclick="removerUltimoAluno()">Remover Ultimo Aluno</button>
     <button onclick="incluirAluno()">Incluir Aluno</button>
     <button onclick="removerPrimeiroAluno()">Remover Primeiro Aluno</button>
+    <button onclick="removerQualquerAluno()">Remover Qual Aluno</button>
     <div id="demo"></div>
     <script>
         // desafiooooo 
@@ -39,6 +40,12 @@
 
         }
 
+        function removerQualquerAluno() {
+            let numeroAluno = prompt("Digite o número do novo aluno");
+            alunos.splice(numeroAluno - 1, 1);
+            lacoFor();
+        }
+
         function removerPrimeiroAluno() {
             if (confirm(`Realmente deseja apagar o primeiro aluno? ${alunos[0]}`)) {
                 alunos.shift();
@@ -47,7 +54,7 @@
         }
 
         function removerUltimoAluno() {
-            let confirmacao = confirm("Realmente deseja apagar o último aluno?");
+            let confirmacao = confirm(`Realmente deseja apagar o útimo aluno? ${alunos[alunos.length - 1]}`);
             if (confirmacao) {
                 alunos.pop();
                 lacoFor();
