@@ -319,19 +319,30 @@ footer {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .horas1 {
     display: flex;
     margin: 10px;
     flex: 2;
-    background-color: #39aae1;
+    /* background-color: #39aae1; */
 }
 
 .hora {
     display: flex;
     margin-left: 10px;
     text-align: right;
-    background-color: #727272;
+    /* background-color: #727272; */
+}
+
+.sema {
+    width: 130px;
+}
+
+.widget_body2 div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 2px rgb(211, 211, 211);
+    font-size: 13px;
 }
