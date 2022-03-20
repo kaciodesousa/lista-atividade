@@ -12,54 +12,53 @@
     select {
         display: block;
     }
-
+    
     h1 {
         font-size: 16px;
         margin-bottom: 0px;
         margin-bottom: 6px;
     }
-
+    
     span {
         font-size: 13px;
         font-family: Arial, Helvetica, sans-serif;
         color: darkblue;
     }
-
+    
     p {
         margin: 0px;
     }
-
+    
     body {
         width: 80%;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-
+    
     .questao {
         background-color: #e0f7faa1;
         padding: 1px 0px 10px 10px;
         margin-bottom: 10px;
         border-radius: 4px;
     }
-
+    
     .questao:hover {
         background-color: #e0f7fa;
     }
-
+    
     input[type='button'] {
         margin-top: 10px;
     }
-
+    
     .mao {
         font-size: 30px;
         margin: 10px;
         cursor: pointer;
     }
-
+    
     .adversario {
         font-size: 50px;
-
     }
 </style>
 
@@ -70,21 +69,22 @@
                 Questã 01:<span>Tabuada
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <input type="text" id="" style="display: inline" />
-            <input type="button" value="Calcular" />
-            <p id="">Resultado: <br>N x 1 = NX<br>N x 2 = NX<br>...<br>N x 10 = NX<br></p>
+            <input type="text" id="numero" style="display: inline" />
+            <input type="button" value="Calcular" onclick="tabuada()" />
+            <div id="demo">Resultado: <br>N x 1 = NX<br>N x 2 = NX<br>...<br>N x 10 = NX<br></div>
         </div>
         <div class="questao">
             <h1>
                 Questã 02:<span>Mostrar os números entre 2 valores
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: Os número entre A e Z são (x,x,x,x,x).</p>
+            <span>Resultado: Os número entre A e Z são (</span>
+            <span id="resultado"></span><span> ). </span><br>
             <label for="">Valor 01:</label>
-            <input type="text" id="" />
+            <input type="text" id="valor1" />
             <label for="">Valor 02:</label>
-            <input type="text" id="" />
-            <input type="button" value="Executar" />
+            <input type="text" id="valor2" />
+            <input type="button" value="Executar" onclick="doisValores()" />
         </div>
         <div class="questao">
             <h1>
@@ -92,12 +92,13 @@
                     Lista armazenada
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: A lista de itens é [xxxx,xxxx,xxxx,xxxxx]</p>
+            <p id="">Resultado: A lista de itens é [
+                <span id="result"></span> ]</p>
             <label for="">Item:</label>
-            <input type="text" id="" />
-            <input type="button" value="Add" />
-            <input type="button" value="Show" />
-            <input type="button" value="Clear" />
+            <input type="text" id="item1" />
+            <input type="button" value="Add" onclick="add()" />
+            <input type="button" value="Show" onclick="show()" />
+            <input type="button" value="Clear" onclick="limpar()" />
         </div>
         <div class="questao">
             <h1>
@@ -114,8 +115,7 @@
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">
-                Resultado: <br />Lista de homens [xxxx,xxxx,xxxx,xxxxx] <br />Lista de
-                mulheres [xxxx,xxxx,xxxx,xxxxx]
+                Resultado: <br />Lista de homens [xxxx,xxxx,xxxx,xxxxx] <br />Lista de mulheres [xxxx,xxxx,xxxx,xxxxx]
             </p>
             <label for="">Nome:</label>
             <input type="text" id="" />
@@ -134,16 +134,74 @@
                     Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">Resultado: [Vitótio|Derrota|Empate]</p>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'"
-                class="mao">✊🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'"
-                class="mao">🖐🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'"
-                class="mao">✌🏽</span>
-            #
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">✊🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">🖐🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">✌🏽</span> #
             <span class="adversario">👋🏽</span>
         </div>
     </div>
+
+    <script>
+        //Questão 01
+        function tabuada() {
+            let texto = "Resultado:<br>";
+            let numero = document.getElementById("numero").value;
+            for (i = 1; i < 10; i++) {
+                texto += `${numero} x ${i} = `;
+                texto += i * numero;
+                texto += "<br>";
+            }
+            texto += "<br>";
+            document.getElementById("demo").innerHTML = texto;
+        }
+        //Questão 02
+        function doisValores() {
+            let texto = "";
+            let valor1 = document.getElementById("valor1").value;
+            let valor2 = document.getElementById("valor2").value;
+            for (i = valor1; i <= valor2; i++) {
+                texto += `${i}, `;
+            }
+            document.getElementById("resultado").innerHTML = texto;
+        }
+        //Questão 03
+        let alunos = [];
+
+        function add() {
+            let item = document.getElementById("item1").value;
+            if (item.length != 0) {
+                alunos.push(item);
+                document.getElementById("item1").value = "";
+            } else {
+                alert("Digite o item na questão 03");
+            }
+        }
+
+        function show() {
+            document.getElementById("result").innerHTML = alunos;
+        }
+
+        function limpar() {
+            let confirmacao = confirm(`Realmente deseja apagar o útimo aluno? ${alunos[alunos.length - 1]}`);
+            if (confirmacao) {
+                alunos.pop();
+                lacoFor();
+            }
+        }
+
+        //Questão 04
+        function megaSena() {
+
+        }
+        //Questão 05
+        function listaHomemMulher() {
+
+        }
+        //Questão 06
+        function JoKenPo() {
+
+        }
+    </script>
 </body>
 
 </html>
