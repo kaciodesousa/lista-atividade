@@ -105,8 +105,8 @@
                 Questã 04:<span>Mega SENA
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado:00,00,00,00,00,00</p>
-            <input type="button" value="Sortear!" />
+            <p id="">Resultado: <span id="ext"></span></p>
+            <input type="button" value="Sortear!" onclick="megaSena()" />
         </div>
         <div class="questao">
             <h1>
@@ -115,28 +115,28 @@
                     <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">
-                Resultado: <br />Lista de homens [xxxx,xxxx,xxxx,xxxxx] <br />Lista de mulheres [xxxx,xxxx,xxxx,xxxxx]
+                Resultado: <br />Lista de homens [ <span id="resultHomem"></span> ] <br />Lista de mulheres [ <span id="resultMulhuer"></span> ]
             </p>
             <label for="">Nome:</label>
-            <input type="text" id="" />
+            <input type="text" id="nomePessoa" />
             <label for="">Sexo:</label>
-            <select name="sexo" id="">
+            <select name="sexo" id="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
             </select>
-            <input type="button" value="Add" />
-            <input type="button" value="Show" />
-            <input type="button" value="Clear" />
+            <input type="button" value="Add" onclick="addPessoa1()" />
+            <input type="button" value="Show" onclick="showPessoa1()" />
+            <input type="button" value="Clear" onclick="clearPessoa1()" />
         </div>
         <div class="questao">
             <h1>
                 DESAFIOO!:<span>
                     Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: [Vitótio|Derrota|Empate]</p>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">✊🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">🖐🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao">✌🏽</span> #
+            <p id="result3">Resultado: [Vitória|Derrota|Empate]</p>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="predra()">✊🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="papel()">🖐🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="tesoura()">✌🏽</span> #
             <span class="adversario">👋🏽</span>
         </div>
     </div>
@@ -165,12 +165,12 @@
             document.getElementById("resultado").innerHTML = texto;
         }
         //Questão 03
-        let alunos = [];
+        let itens = [];
 
         function add() {
             let item = document.getElementById("item1").value;
             if (item.length != 0) {
-                alunos.push(item);
+                itens.push(item);
                 document.getElementById("item1").value = "";
             } else {
                 alert("Digite o item na questão 03");
@@ -178,28 +178,129 @@
         }
 
         function show() {
-            document.getElementById("result").innerHTML = alunos;
+            document.getElementById("result").innerHTML = itens;
         }
 
         function limpar() {
-            let confirmacao = confirm(`Realmente deseja apagar o útimo aluno? ${alunos[alunos.length - 1]}`);
+            let confirmacao = confirm(`Realmente deseja apagar o útimo aluno? ${itens[itens.length - 1]}`);
             if (confirmacao) {
-                alunos.pop();
+                itens.pop();
                 lacoFor();
             }
         }
 
         //Questão 04
+        function jindividual(max) {
+            var principal = [];
+            qnum = 6;
+
+            for (j = 0; j < qnum; j++) {
+                //Sorteia o número;
+                var atual = Math.floor(Math.random() * max + 1);
+                //compara o atual com os dados já existentes.
+                //comparando um a um:
+                for (i = 0; i < principal.length; i++) {
+                    //se for igual, sorteia novo e zera contagem 
+                    //(No primeiro número i=principal, ou seja, acrescenta ao vetor diretamente.)
+                    if (atual === principal[i]) {
+                        atual = Math.floor(Math.random() * max + 1);
+                        i = -1;
+                    }
+                    //Se não for igual passa ao próximo (i++)	
+                }
+
+                //Não encontrou correspondência, acrescenta o valor ao vetor... 
+                principal[i] = atual;
+                //...e passa a próxima posição (j++)
+            }
+
+            //...colocando em ordem crescente   
+            principal = principal.sort(function(a, b) {
+                return a - b
+            });
+
+            //...colocando dentro das bolas  
+            //linha com um jogo completo
+            var ext = document.createElement("DIV");
+            ext.setAttribute("style", "background-color:none; margin:10px; width:100%;float:left;");
+            for (i = 0; i < qnum; i++) {
+                //...criando cada bola ...
+                var x = document.createElement("DIV");
+                //...e a caixa dentro das bolas para formatação;;;
+                var p = document.createElement("DIV");
+                //...e finalmente o texto.
+                var t = document.createTextNode(principal[i]);
+
+                //estilizando
+                x.setAttribute("style", "text-align:center;background-color: #fff;height:50px;width:50px;border-radius:100%;float:left;margin:10px;");
+                p.setAttribute("style", "background-color: #fff;height:10px;width:10px;border-radius:00%;float:left;position:relative;top:12px;left:18px;vertical-align:+15px;");
+                //Montando o conjunto.
+                ext.appendChild(x);
+                x.appendChild(p);
+                p.appendChild(t);
+                document.getElementById("ext").appendChild(ext);
+            }
+
+
+        }
+
+
         function megaSena() {
-
+            //Escolhendo a quantidade de jogos...
+            document.getElementById("ext").innerHTML = "";
+            qjog = 1;
+            for (n = 1; n <= qjog; n++) {
+                jindividual(60);
+            }
         }
+
         //Questão 05
-        function listaHomemMulher() {
+        let homem = [];
+        let mulher = [];
+
+        function addPessoa1() {
+            let nome = document.getElementById("nomePessoa").value;
+            let sexo = document.getElementById("sexo").value;
+
+            if (nomePessoa.length != 0) {
+                if (sexo == "M") {
+                    mulher.push(nome);
+                    document.getElementById("nomePessoa").value = "";
+                } else {
+                    homem.push(nome);
+                    document.getElementById("nomePessoa").value = "";
+                }
+            } else {
+                alert("Digite o item na questão 05");
+            }
+        }
+
+        function showPessoa1() {
+            document.getElementById("resultMulhuer").innerHTML = mulher;
+            document.getElementById("resultHomem").innerHTML = homem;
+        }
+
+        function clearPessoa1() {
+            let confirmacao = confirm(`Realmente deseja apagar o útimo pessoa? ${homem[homem.length - 1]} e ${mulher[mulher.length - 1]}`);
+            if (confirmacao) {
+                homem.pop();
+                mulher.pop();
+
+            }
 
         }
-        //Questão 06
-        function JoKenPo() {
 
+        //Questão 06
+        function predra() {
+            document.getElementById("result3").innerHTML = "Resultado: [Derrota]";
+        }
+
+        function papel() {
+            document.getElementById("result3").innerHTML = "Resultado: [Empate]";
+        }
+
+        function tesoura() {
+            document.getElementById("result3").innerHTML = "Resultado: [Vitória]";
         }
     </script>
 </body>
