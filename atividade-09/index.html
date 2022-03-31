@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0070)https://kaciodesousa.github.io/lista-atividade/atividade-09/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 09</title>
-</head>
 <style>
     input[type='text'],
     select {
@@ -60,83 +58,84 @@
     .adversario {
         font-size: 50px;
     }
-</style>
+</style></head>
+
 
 <body>
     <div id="corpo">
         <div class="questao">
             <h1>
                 Questã 01:<span>Tabuada
-                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <input type="text" id="numero" style="display: inline" />
-            <input type="button" value="Calcular" onclick="tabuada()" />
+            <input type="text" id="numero" style="display: inline">
+            <input type="button" value="Calcular" onclick="tabuada()">
             <div id="demo">Resultado: <br>N x 1 = NX<br>N x 2 = NX<br>...<br>N x 10 = NX<br></div>
         </div>
         <div class="questao">
             <h1>
                 Questã 02:<span>Mostrar os números entre 2 valores
-                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <span>Resultado: Os número entre A e Z são (</span>
             <span id="resultado"></span><span> ). </span><br>
             <label for="">Valor 01:</label>
-            <input type="text" id="valor1" />
+            <input type="text" id="valor1">
             <label for="">Valor 02:</label>
-            <input type="text" id="valor2" />
-            <input type="button" value="Executar" onclick="doisValores()" />
+            <input type="text" id="valor2">
+            <input type="button" value="Executar" onclick="doisValores()">
         </div>
         <div class="questao">
             <h1>
                 Questã 03:<span>
                     Lista armazenada
-                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">Resultado: A lista de itens é [
                 <span id="result"></span> ]</p>
             <label for="">Item:</label>
-            <input type="text" id="item1" />
-            <input type="button" value="Add" onclick="add()" />
-            <input type="button" value="Show" onclick="show()" />
-            <input type="button" value="Clear" onclick="limpar()" />
+            <input type="text" id="item1">
+            <input type="button" value="Add" onclick="add()">
+            <input type="button" value="Show" onclick="show()">
+            <input type="button" value="Clear" onclick="limpar()">
         </div>
         <div class="questao">
             <h1>
                 Questã 04:<span>Mega SENA
-                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">Resultado: <span id="ext"></span></p>
-            <input type="button" value="Sortear!" onclick="megaSena()" />
+            <input type="button" value="Sortear!" onclick="megaSena()">
         </div>
         <div class="questao">
             <h1>
                 Questã 05:<span>
                     Lista homens e mulheres
-                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
             <p id="">
-                Resultado: <br />Lista de homens [ <span id="resultHomem"></span> ] <br />Lista de mulheres [ <span id="resultMulhuer"></span> ]
+                Resultado: <br>Lista de homens [ <span id="resultHomem"></span> ] <br>Lista de mulheres [ <span id="resultMulhuer"></span> ]
             </p>
             <label for="">Nome:</label>
-            <input type="text" id="nomePessoa" />
+            <input type="text" id="nomePessoa">
             <label for="">Sexo:</label>
             <select name="sexo" id="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
             </select>
-            <input type="button" value="Add" onclick="addPessoa1()" />
-            <input type="button" value="Show" onclick="showPessoa1()" />
-            <input type="button" value="Clear" onclick="clearPessoa1()" />
+            <input type="button" value="Add" onclick="addPessoa1()">
+            <input type="button" value="Show" onclick="showPessoa1()">
+            <input type="button" value="Clear" onclick="clearPessoa1()">
         </div>
         <div class="questao">
             <h1>
                 DESAFIOO!:<span>
-                    Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
+                    Jo-Ken-Po <a href="https://kaciodesousa.github.io/lista-atividade/atividade-09/detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="result3">Resultado: [Vitória|Derrota|Empate]</p>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="predra()">✊🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="papel()">🖐🏽</span>
-            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao" onclick="tesoura()">✌🏽</span> #
+            <p id="result3">Resultado: [Vitória]</p>
+            <span onmouseover="this.style.fontSize = &#39;50px&#39;" onmouseout="this.style.fontSize = &#39;30px&#39;" class="mao" onclick="predra()" style="font-size: 30px;">✊🏽</span>
+            <span onmouseover="this.style.fontSize = &#39;50px&#39;" onmouseout="this.style.fontSize = &#39;30px&#39;" class="mao" onclick="papel()" style="font-size: 30px;">🖐🏽</span>
+            <span onmouseover="this.style.fontSize = &#39;50px&#39;" onmouseout="this.style.fontSize = &#39;30px&#39;" class="mao" onclick="tesoura()" style="font-size: 30px;">✌🏽</span> #
             <span class="adversario">👋🏽</span>
         </div>
     </div>
@@ -303,6 +302,6 @@
             document.getElementById("result3").innerHTML = "Resultado: [Vitória]";
         }
     </script>
-</body>
 
-</html>
+
+</body></html>
