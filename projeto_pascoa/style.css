@@ -63,7 +63,7 @@ body {
 }
 
 .card:hover .imgBx img {
-    transform: scale(220%);
+    transform: scale(220%) rotate(-360deg);
 }
 
 .card .details {
