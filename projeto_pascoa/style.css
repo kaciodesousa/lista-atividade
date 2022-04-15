@@ -5,6 +5,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+.containe {
+    padding: 10px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -26,7 +30,7 @@ body {
     /* background: #000;
     height: 300px; */
     margin: 0px;
-    padding: 0;
+    padding: 0px;
 }
 
 .card {
@@ -34,7 +38,7 @@ body {
     position: relative;
     width: 300px;
     height: 380px;
-    background: #000;
+    /* background: #000; */
     box-shadow: 0 15px 45px rgb(0, 0, 0, 0.1);
     display: flex;
     overflow: hidden;
@@ -43,9 +47,11 @@ body {
 
 .card:hover {
     width: 600px;
+    border-bottom-right-radius: 20px;
 }
 
 .card .imgBx {
+    /* border-top-left-radius: 20px; */
     position: relative;
     min-width: 300px;
     height: 100%;
@@ -67,6 +73,7 @@ body {
 }
 
 .card .details {
+    border-bottom-right-radius: 20px;
     position: absolute;
     left: 0;
     min-width: 300px;
@@ -192,9 +199,11 @@ body {
 
 .card .details .group a {
     display: inline-flex;
+    margin-right: 20px;
     padding: 10px 25px;
     background: #fff;
     text-decoration: none;
     text-transform: uppercase;
     color: #4ba9e9;
+    cursor: pointer;
 }
