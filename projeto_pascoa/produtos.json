@@ -1,0 +1,41 @@
+[{
+        "nome": "ferrero rocher ao leite, 225g",
+        "descricao": "Clássico, elegante e com um sabor inconfundível de dar água na boca, o Bombom Ferrero Rocher que você já conhece.",
+        "valor": 68.59,
+        "qt": 0,
+        "img": "img/1.jpg"
+    },
+    {
+        "nome": "tortuguita confeito 45G arcor",
+        "descricao": "Ovo de Páscoa Tortuguita - 45G Ovo da Tortuguita vem com um delicioso Ovo de Chocolate ao Leite e Deliciosos Confeitos Coloridos, Diversão na certa * Ingredientes: ovo de chocolate ao leite",
+        "valor": 10.79,
+        "qt": 0,
+        "img": "img/2.jpg"
+    },
+    {
+        "nome": "crocante 215G garoto",
+        "descricao": "Quer Ovo de Páscoa Garoto Crocante 215g com Preço Baixo e Entrega Rápida? Na Drogaria Araujo Tem - Online 24h. Ovo de Chocolate ao Leite com pedaços crocantes de amendoim",
+        "valor": 29.49,
+        "qt": 0,
+        "img": "img/3.jpg"
+    },
+    {
+        "nome": "Serenata De Amor 196g Garoto",
+        "descricao": "Só o cacau explica o sabor do chocolate Garoto. Sua intensidade que transborda a cada mordida é capaz de transformar a Páscoa de qualquer um. Ele derrete facilmente na boca e nos faz querer saborear cada pedacinho!",
+        "valor": 29.89,
+        "qt": 0,
+        "img": "img/4.jpg"
+    }, {
+        "nome": "kit kat 332G nestle",
+        "descricao": "Quer Ovo de Páscoa Nestlé Kit Kat White 332g. Delicioso Chocolate Branco com Waffer crocante na casca. Confira!",
+        "valor": 49.29,
+        "qt": 0,
+        "img": "img/5.jpg"
+    }, {
+        "nome": "ALPINO 337G NESTLE",
+        "descricao": "A cremosidade de um chocolate Nestlé é capaz de transformar a Páscoa de qualquer um. Ele derrete facilmente na boca e faz querer saborear cada minuto de forma mais presente!",
+        "valor": 49.99,
+        "qt": 0,
+        "img": "img/6.jpg"
+    }
+]

@@ -17,8 +17,9 @@ body {
     color: #fff;
     /* background-color: #4ba9e9; */
     text-align: center;
-    font-size: 400%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 450%;
+    font-family: "Brush Script MT";
+    text-shadow: 0 15px 45px rgb(255, 255, 255);
 }
 
 .produto {
@@ -185,7 +186,7 @@ body {
     font-weight: 300;
 }
 
-.card .details .group h2 span {
+.card .details .group .valorC {
     font-size: 0.75em;
 }
 
