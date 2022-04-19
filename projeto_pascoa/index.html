@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container1">
         <!-- <div class="row-no-gutters">
             <div class="banner">
                 <img src="img/banner.jpg" alt="">
@@ -75,10 +75,19 @@
                     <!-- <div class="modal-body">
 
                     </div> -->
-                    <div class="modal-footer form-inline">
+                    <div class="modal-header form-group">
+                        <label for="email">Nome:</label>
                         <input type="text" name="" id="nome" class="form-control" placeholder="Nome">
+                        <label for="email">Endereço:</label>
                         <input type="text" name="" id="endereco" class="form-control" placeholder="Endereço">
-                        <button type="button" onclick="enviar()" class="btn btn-default" disabled id="btEnviar">Enviar</button>
+                        <label for="email">Forma de Pagamento:</label>
+                        <select class="form-control" id="pagamento">
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Cartão">Cartão</option>
+                            <option value="PIX">PIX</option>
+                        </select>
+                        <br>
+                        <button type="button" onclick="enviar()" class="btn btn-primary mt-3" disabled id="btEnviar">Enviar</button>
                     </div>
                 </div>
 
@@ -134,15 +143,18 @@
             }
 
             let msgModal = "";
+            let msgWhatsapp = "";
 
             function mostrarPedido() {
                 msgModal = "";
+                msgWhatsapp = "";
                 let subTotal = 0;
                 let total = 0;
                 for (const produto of lista) {
                     if (produto.qt > 0) {
                         subTotal = (produto.valor * produto.qt).toFixed(2);
                         total += +subTotal;
+                        msgWhatsapp += `✅ - ${produto.qt} ${produto.nome.toUpperCase()} Valor = R$ ${produto.valor} Total = R$ ${subTotal}\n`;
                         msgModal += `<tr><td>${produto.nome.toUpperCase()}</td><td>R$ ${produto.valor}</td><td class="tdQt">${produto.qt}</td><td>R$ ${subTotal}</td></tr>`;
                     }
                 }
@@ -150,7 +162,8 @@
                     msgModal = "<tr><td>Nenhum produto selecionado.</td></tr>";
                     document.querySelector("#btEnviar").disabled = "disabled";
                 } else {
-                    msgModal += `<h4 class="valorTotal"> Total R$ ${total.toFixed(2)}</h4>`
+                    msgWhatsapp += `\n\n*Total R$ ${total.toFixed(2)}*\n`;
+                    msgModal += `<h4 class="valorTotal"> Total R$ ${total.toFixed(2)}</h4>`;
                     document.querySelector("#btEnviar").disabled = "";
                 }
                 document.querySelector(".modal-body").innerHTML = msgModal;
@@ -159,15 +172,15 @@
 
             function enviar() {
                 let fone = '556194214606';
-                msgModal = msgModal.replaceAll("<tr>", "").replaceAll("</td>", "\n");
-                msgModal = msgModal.replaceAll("<td>", "").replaceAll("<h4 class='valorTotal'>", "");
                 let nome = document.querySelector("#nome").value;
                 let endereco = document.querySelector("#endereco").value;
-                msgModal += `\nNome: *${nome}*`;
-                msgModal += `\nEnderço: *${endereco}*`;
-                msgModal = encodeURI(msgModal);
+                let pagamento = document.querySelector("#pagamento").value;
+                msgWhatsapp += `\n*Nome:* ${nome}`;
+                msgWhatsapp += `\n*Enderço:* ${endereco}`;
+                msgWhatsapp += `\n*Forma de Pagamento:* ${pagamento}`;
+                msgWhatsapp = encodeURI(msgWhatsapp);
 
-                link = `https://api.whatsapp.com/send?phone=${fone}&text=${msgModal}`;
+                link = `https://api.whatsapp.com/send?phone=${fone}&text=${msgWhatsapp}`;
                 window.open(link, '_blanck')
             }
 

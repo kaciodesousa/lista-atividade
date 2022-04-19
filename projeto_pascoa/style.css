@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    min-height: 100vh;
+    min-width: 620px;
     /* background-image: url("img/fundo.jpg"); */
     background-size: cover;
     /* background: linear-gradient(#f86767, #f86767 10%, #f4faff 90%, #f4faff 100%); */
@@ -26,6 +26,7 @@ body {
 }
 
 .produto {
+    min-width: 620px;
     /* background: #000;
     width: 100%;
     height: 300px; */
@@ -215,5 +216,5 @@ body {
 }
 
 .valorTotal {
-    padding: 5px;
+    padding: 8px;
 }
