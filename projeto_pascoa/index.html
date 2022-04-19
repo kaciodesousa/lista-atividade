@@ -14,12 +14,12 @@
 
 <body>
 
-    <div class="containe">
-        <div class="row-no-gutters">
+    <div class="container-fluid">
+        <!-- <div class="row-no-gutters">
             <div class="banner">
                 <img src="img/banner.jpg" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="row lista">
             <div class="col-md-6 produto">
                 <div class="card">
@@ -38,7 +38,7 @@
                         </ul>
                         <div class="group">
                             <h2><sup>R$</sup><span class="valorR">11</span><span class="valorC">,99</span></h2>
-                            <a id="enviar" data-toggle="modal" data-target="#myModal">Ver pedido</a>
+                            <a id="enviar" data-toggle="modal" data-target="#myModal" onclick="mostrarPedido()">Ver pedido</a>
                         </div>
                     </div>
                 </div>
@@ -54,13 +54,31 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Seu pedido</h4>
+                        <h4 class="modal-title">Informações do Pedido</h4>
                     </div>
-                    <div class="modal-body">
-                        <p>Lista de todos seu pedido</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="modal1()">Enviar</button>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome do Produto</th>
+                                <th>Valor</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="modal-body">
+
+                        </tbody>
+                    </table>
+
+
+                    <!-- <div class="modal-body">
+
+                    </div> -->
+                    <div class="modal-footer form-inline">
+                        <input type="text" name="" id="nome" class="form-control" placeholder="Nome">
+                        <input type="text" name="" id="endereco" class="form-control" placeholder="Endereço">
+                        <button type="button" onclick="enviar()" class="btn btn-default" disabled id="btEnviar">Enviar</button>
                     </div>
                 </div>
 
@@ -113,6 +131,44 @@
                 if (p.qt < 0) p.qt = 0;
                 document.getElementsByClassName("qt")[id].innerHTML = p.qt;
 
+            }
+
+            let msgModal = "";
+
+            function mostrarPedido() {
+                msgModal = "";
+                let subTotal = 0;
+                let total = 0;
+                for (const produto of lista) {
+                    if (produto.qt > 0) {
+                        subTotal = (produto.valor * produto.qt).toFixed(2);
+                        total += +subTotal;
+                        msgModal += `<tr><td>${produto.nome.toUpperCase()}</td><td>R$ ${produto.valor}</td><td class="tdQt">${produto.qt}</td><td>R$ ${subTotal}</td></tr>`;
+                    }
+                }
+                if (msgModal == "") {
+                    msgModal = "<tr><td>Nenhum produto selecionado.</td></tr>";
+                    document.querySelector("#btEnviar").disabled = "disabled";
+                } else {
+                    msgModal += `<h4 class="valorTotal"> Total R$ ${total.toFixed(2)}</h4>`
+                    document.querySelector("#btEnviar").disabled = "";
+                }
+                document.querySelector(".modal-body").innerHTML = msgModal;
+            }
+
+
+            function enviar() {
+                let fone = '556194214606';
+                msgModal = msgModal.replaceAll("<tr>", "").replaceAll("</td>", "\n");
+                msgModal = msgModal.replaceAll("<td>", "").replaceAll("<h4 class='valorTotal'>", "");
+                let nome = document.querySelector("#nome").value;
+                let endereco = document.querySelector("#endereco").value;
+                msgModal += `\nNome: *${nome}*`;
+                msgModal += `\nEnderço: *${endereco}*`;
+                msgModal = encodeURI(msgModal);
+
+                link = `https://api.whatsapp.com/send?phone=${fone}&text=${msgModal}`;
+                window.open(link, '_blanck')
             }
 
             buscarListaProduto();
