@@ -39,5 +39,26 @@
         "valor": 49.99,
         "qt": 0,
         "img": "img/6.jpg"
+    },
+    {
+        "nome": "lol 80G delicce",
+        "descricao": "Ovo pascoa lol 80G delicce",
+        "valor": 14.99,
+        "qt": 0,
+        "img": "img/7.jpg"
+    },
+    {
+        "nome": "ben 10 80G delicce",
+        "descricao": "Ovo de pascoa ben 10 80G delicce ovo ben 10 80G delicce",
+        "valor": 14.99,
+        "qt": 0,
+        "img": "img/8.jpg"
+    },
+    {
+        "nome": "Lacta Batman 166",
+        "descricao": "A perfeita combinação de cacau e leite traz o sabor único para o Ovo de Páscoa Lacta do Batman, o herói que movimentará os cinemas com o seu novo filme. ",
+        "valor": 47.99,
+        "qt": 0,
+        "img": "img/9.jpg"
     }
 ]
