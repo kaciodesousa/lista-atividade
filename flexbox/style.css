@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.conteiner {
+    height: 400px;
+    width: 100%;
+    background: green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    background: white;
+    border: 2px solid greenyellow;
+    justify-content: center;
+    align-items: center;
+}
+
