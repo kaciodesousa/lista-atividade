@@ -1,9 +1,10 @@
 lista = [];
+
 function buscarListaProduto() {
     let ajax = new XMLHttpRequest();
-    ajax.open("GET", "https://pascoa-chiquinha.herokuapp.com/produto/");
+    ajax.open("GET", "https://projeto-pascoa.herokuapp.com/");
     ajax.send();
-    ajax.onload = function () {
+    ajax.onload = function() {
         lista = JSON.parse(this.response);
         replicar();
     }
@@ -21,8 +22,8 @@ function replicar() {
         produto.querySelector(".descricao").innerHTML = p.descricao;
         produto.querySelector(".qt").innerHTML = p.qt;
 
-        produto.querySelector(".menos").addEventListener("click", function () { alterarQt(id, -1) });
-        produto.querySelector(".mais").addEventListener("click", function () { alterarQt(id, 1) });
+        produto.querySelector(".menos").addEventListener("click", function() { alterarQt(id, -1) });
+        produto.querySelector(".mais").addEventListener("click", function() { alterarQt(id, 1) });
 
         document.querySelector(".lista").append(produto);
         i++;
@@ -37,6 +38,7 @@ function alterarQt(id, qt) {
     document.getElementsByClassName("qt")[id].innerHTML = p.qt;
 }
 let msgModal = "";
+
 function mostrarPedido() {
     msgModal = "";
     let subTotal = 0;

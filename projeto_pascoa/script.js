@@ -2,7 +2,7 @@ lista = [];
 
 function buscarListaProduto() {
     let ajax = new XMLHttpRequest();
-    ajax.open("GET", "https://pascoa-chiquinha.herokuapp.com/produto/");
+    ajax.open("GET", "https://projeto-pascoa.herokuapp.com/");
     ajax.send();
     ajax.onload = function() {
         lista = JSON.parse(this.response);
