@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Ajax JavaScript File Upload Example </title>
+    <style>
+        .container {
+            display: flex;
+        }
+        
+        .your-img {
+            width: 250px;
+            max-width: 250px;
+            max-height: 250px;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        label {
+            border: 1px solid #000;
+            background-color: #FFF;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        button {
+            border: 1px solid #000;
+            background-color: #FFF;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .img {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .button {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- HTML5 Input Form Elements -->
+    <div class="conteiner">
+        <div class="img">
+            <img class="your-img" id="thumbnail" alt="Photos preview" src="https://static.wikia.nocookie.net/awakening-of-the-rebellion/images/c/c4/Missing_Image.jpg" />
+        </div>
+        <div class="button">
+            <label for="fileupload">Adicionar</label>
+            <input type="file" id="fileupload" name="fileupload" accept="image/png, image/jpeg" />
+            <button id="upload-button" onclick="uploadFile()">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Ajax JavaScript File Upload Logic -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        async function uploadFile() {
+            let formData = new FormData();
+            formData.append("file", fileupload.files[0]);
+            await fetch('upload.php', {
+                method: "POST",
+                body: formData
+            });
+            alert('O arquivo foi carregado com sucesso.');
+        }
+
+        $(document).ready(function() {
+            $("#fileupload").change(function() {
+                showImageThumbnail(this);
+
+            });
+        });
+
+        function showImageThumbnail(fileInput) {
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $("#thumbnail").attr("src", e.target.result);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+</body>
+
+</html>
