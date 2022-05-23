@@ -1,5 +1,6 @@
 body {
     background: rgb(238, 235, 235);
+    display: flex;
 }
 
 .social-menu {
@@ -42,7 +43,7 @@ body {
     display: block;
     height: 40px;
     width: 40px;
-    border-radius: 40px;
+    border-radius: 5px;
     background-color: #FFF;
     text-align: center;
     transition: .6s;
@@ -51,9 +52,11 @@ body {
 }
 
 .social-menu ul li a:hover {
-    transform: translate(10px, 10px);
+    transform: translate(0px, 15px);
 }
 
+
+/* 
 .social-menu ul li:nth-child(1) a:hover {
     background-color: #3b5999;
 }
@@ -70,4 +73,4 @@ body {
 .social-menu ul li:nth-child(4) a:hover {
     background-color: #c1e1fa;
     ;
-}
+} */

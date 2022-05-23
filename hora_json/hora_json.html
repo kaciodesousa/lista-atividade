@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora JSON</title>
+	
+</head>
+<body>
+	<h1 class="text"></h1>
+
+	<div class="day">
+		<h1 class="monday"></h1>
+	</div>
+
+
+	<script>	
+	
+		lista = [];
+		function hora() {
+		var url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo/";
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", url);
+
+		xhr.onreadystatechange = function () {
+		   if (xhr.readyState === 4) {
+			  lista = JSON.parse(this.response);
+			  hora = lista.datetime.substr(11,8)
+			  document.querySelector(".text").innerHTML = hora;
+			  if (lista.day_of_week == 1) {
+				document.querySelector(".monday").innerHTML = "Segunda-Feira";
+			  } else if (lista.day_of_week == 2) {
+				document.querySelector(".monday").innerHTML = "Terça-Feira";
+			  } else if (lista.day_of_week == 3) {
+				document.querySelector(".monday").innerHTML = "Quarta-Feira";
+			  } else if (lista.day_of_week == 4) {
+				document.querySelector(".monday").innerHTML = "Quinta-Feira";
+			  } else if (lista.day_of_week == 5) {
+				document.querySelector(".monday").innerHTML = "Sexta-Feira";
+			  } else if (lista.day_of_week == 6) {
+				document.querySelector(".monday").innerHTML = "Sábado";
+			  } else if (lista.day_of_week == 7) {
+				document.querySelector(".monday").innerHTML = "Domingo";
+			  }
+			  	
+			//   console.log(xhr.status);
+			//   console.log(xhr.responseText);
+		   }};
+		xhr.send();
+		}
+		setInterval(hora, 100);	
+	</script>
+</body>
+</html>
