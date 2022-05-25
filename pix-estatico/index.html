@@ -27,10 +27,10 @@
         var valor = 100.00;
         const pix = new Pix(CPF, descricao, nome, cidade, id, valor);
         const payload = pix.getPayload();
-        document.querySelector(".pix").innerHTML = payload.toUpperCase();
+        document.querySelector(".pix").innerHTML = payload;
 
         let finalURL = 'https://chart.googleapis.com/chart?cht=qr&chl=' +
-            payload.toUpperCase() +
+            payload +
             '&chs=260x260&chld=L|0'
 
         document.querySelector(".qr-code").src = finalURL;
