@@ -11,6 +11,15 @@
 
 <body>
     <div class="text-center">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf">
+    </div>
+    <div class="text-center">
+        <label for="valor">Valor:</label>
+        <input type="text" name="valor" id="valor">
+        <button onclick="enviar()">Entrar</button>
+    </div>
+    <div class="text-center">
         <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=260x260&chld=L|0" class="qr-code img-thumbnail img-responsive" />
     </div>
     <div class="col-sm-10">
@@ -19,21 +28,23 @@
 
     <script src="index.js"></script>
     <script>
-        var CPF = "02848846186";
-        var descricao = "Pagamento do pedido 123456";
-        var nome = "Kacio de Sousa";
-        var cidade = "SAO PAULO";
-        var id = "WDEV1234";
-        var valor = 100.00;
-        const pix = new Pix(CPF, descricao, nome, cidade, id, valor);
-        const payload = pix.getPayload();
-        document.querySelector(".pix").innerHTML = payload;
+        function enviar() {
+            var CPF = document.getElementById("cpf").value;
+            var descricao = "Pagamento do pedido 123456";
+            var nome = "Kacio de Sousa";
+            var cidade = "SAO PAULO";
+            var id = "WDEV1234";
+            var valor = parseFloat(document.getElementById("valor").value);
+            const pix = new Pix(CPF, descricao, nome, cidade, id, valor);
+            const payload = pix.getPayload();
+            document.querySelector(".pix").innerHTML = payload;
 
-        let finalURL = 'https://chart.googleapis.com/chart?cht=qr&chl=' +
-            payload +
-            '&chs=260x260&chld=L|0'
+            let finalURL = 'https://chart.googleapis.com/chart?cht=qr&chl=' +
+                payload +
+                '&chs=260x260&chld=L|0'
 
-        document.querySelector(".qr-code").src = finalURL;
+            document.querySelector(".qr-code").src = finalURL;
+        }
     </script>
 
 </body>
