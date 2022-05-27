@@ -22,6 +22,7 @@
     </div>
     <div class="text-center">
         <button onclick="enviar()">Gerar</button>
+        <button onclick="copiar()">Copiar</button>
     </div>
 
     <script src="index.js"></script>
@@ -42,6 +43,16 @@
                 '&chs=260x260&chld=L|0'
 
             document.querySelector(".qr-code").src = finalURL;
+        }
+
+        function copiar() {
+            var copyText = document.getElementById("pix");
+            var textArea = document.createElement("textarea");
+            textArea.value = copyText.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
         }
     </script>
 
