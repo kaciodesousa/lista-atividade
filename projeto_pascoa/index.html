@@ -26,7 +26,7 @@
             <div class="col-md-6 produto">
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img/1.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="details">
                         <h3 class="titulo">Ovo de páscoa tortuguita<br><span>confeito 45G arcor</span></h3>
@@ -83,20 +83,30 @@
                         <label for="email">Endereço:</label>
                         <input type="text" name="" id="endereco" class="form-control" placeholder="Endereço">
                         <label for="email">Forma de Pagamento:</label>
-                        <select class="form-control" id="pagamento">
+                        <select class="form-control" id="pagamento" onclick="pix()"> 
                             <option value="Dinheiro">Dinheiro</option>
                             <option value="Cartão">Cartão</option>
                             <option value="PIX">PIX</option>
                         </select>
+                        <div class="pix">
+                            <span class="chavaPiX" id="pix"></span>
+                        </div>
                         <br>
-                        <button type="button" onclick="enviar()" class="btn btn-primary mt-3" disabled id="btEnviar"><i class="fa fa-whatsapp" aria-hidden="true"></i>  Enviar</button>
+                        <div class="tx3">
+                            <button type="button" onclick="enviar()" class="btn btn-primary mt-3" disabled id="btEnviar"><i class="fa fa-whatsapp" aria-hidden="true"></i>  Enviar</button>
+                            <button id="cp" onclick="copiar()" class="btn btn-primary mt-3">Copiar</button>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
         </div>
 
+        <script src="payload.js"></script>
         <script src="script.js"></script>
+
+
 
 </body>
 

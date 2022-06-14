@@ -219,3 +219,21 @@ body {
 .valorTotal {
     padding: 8px;
 }
+
+.pix {
+    display: none;
+    margin-top: 10px;
+    border: #c7c7c7 solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(146, 146, 146);
+}
+
+.tx3 {
+    display: flex;
+}
+
+#cp {
+    display: none;
+    margin-left: 10px;
+}

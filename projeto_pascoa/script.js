@@ -48,12 +48,13 @@ function alterarQt(id, qt) {
 
 let msgModal = "";
 let msgWhatsapp = "";
+let total = 0;
 
 function mostrarPedido() {
     msgModal = "";
     msgWhatsapp = "";
     let subTotal = 0;
-    let total = 0;
+
     for (const produto of lista) {
         if (produto.qt > 0) {
             subTotal = (produto.valor * produto.qt).toFixed(2);
@@ -89,3 +90,35 @@ function enviar() {
 }
 
 buscarListaProduto();
+
+function pix() {
+    if (document.getElementById("pagamento").value == "PIX") {
+
+        var CPF = "02848846186";
+        var descricao = "Pagamento do pedido 123456";
+        var nome = "Kacio de Sousa";
+        var cidade = "BRASILIA";
+        var id = "WDEV1234";
+        var valor = parseFloat(total.toFixed(2));
+        const pix = new Pix(CPF, descricao, nome, cidade, id, valor);
+        const payload = pix.getPayload();
+
+        document.querySelector(".pix").style.display = "block";
+        document.querySelector("#cp").style.display = "block";
+        document.querySelector(".chavaPiX").innerHTML = payload;
+    } else {
+        document.querySelector(".chavaPiX").innerHTML = ""
+        document.querySelector("#cp").style.display = "none";
+        document.querySelector(".pix").style.display = "none";
+    }
+}
+
+function copiar() {
+    var copyText = document.getElementById("pix");
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("Copy");
+    textArea.remove();
+}
