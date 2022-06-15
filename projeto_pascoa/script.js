@@ -72,6 +72,7 @@ function mostrarPedido() {
         document.querySelector("#btEnviar").disabled = "";
     }
     document.querySelector(".modal-body").innerHTML = msgModal;
+    pix();
 }
 
 
