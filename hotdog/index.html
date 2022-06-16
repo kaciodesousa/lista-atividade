@@ -172,11 +172,46 @@
                 object-fit: cover;
             }
         }
+        
+        .fixe {
+            display: flex;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            background-color: #fff;
+            z-index: 1;
+        }
+        
+        .fixe a {
+            flex: 1;
+            padding-left: 25px;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #FFF;
+            color: #000;
+            text-align: center;
+            z-index: 2;
+            sh
+        }
     </style>
     <script type='text/javascript' src=''></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
     <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+
 </head>
+
+<div class="fixe">
+    <a href="#anchor">Menu 1</a>
+    <a href="#anchor">Menu 2</a>
+    <a href="#anchor">Menu 3</a>
+    <a href="#anchor">Menu 4</a>
+</div>
+
 
 <body class='snippet-body'>
     <section class="main-content">
@@ -274,6 +309,9 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="anchor"></div>
+
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="food-card food-card--vertical">
                         <div class="food-card_img">
@@ -367,6 +405,10 @@
             </div>
         </div>
     </section>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
     <script type='text/javascript'></script>
 </body>
 
