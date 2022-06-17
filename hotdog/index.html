@@ -173,18 +173,28 @@
             }
         }
         
-        .fixe {
-            display: flex;
-            padding: 10px;
-            width: 100%;
+        div.scrollmenu {
+            overflow: hidden;
+            background-color: #333;
             position: fixed;
-            background-color: #fff;
-            z-index: 1;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+            z-index: 3;
         }
         
-        .fixe a {
-            flex: 1;
-            padding-left: 25px;
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        
+        div.scrollmenu a:hover {
+            background-color: #777;
         }
         
         .footer {
@@ -192,8 +202,12 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #FFF;
+            padding-top: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             color: #000;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
             text-align: center;
             z-index: 2;
         }
@@ -204,11 +218,22 @@
 
 </head>
 
-<div class="fixe">
-    <a href="#anchor">Menu 1</a>
-    <a href="#anchor">Menu 2</a>
-    <a href="#anchor">Menu 3</a>
-    <a href="#anchor">Menu 4</a>
+<div class="scrollmenu">
+    <a href="#1">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#support">Support</a>
+    <a href="#blog">Blog</a>
+    <a href="#tools">Tools</a>
+    <a href="#base">Base</a>
+    <a href="#custom">Custom</a>
+    <a href="#more">More</a>
+    <a href="#logo">Logo</a>
+    <a href="#friends">Friends</a>
+    <a href="#partners">Partners</a>
+    <a href="#people">People</a>
+    <a href="#work">Work</a>
 </div>
 
 
@@ -309,7 +334,7 @@
                     </div>
                 </div>
 
-                <div id="anchor"></div>
+                <div id="1"></div>
 
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="food-card food-card--vertical">
@@ -406,7 +431,7 @@
     </section>
 
     <div class="footer">
-        <p>Footer</p>
+        <p>Enviar</p>
     </div>
     <script type='text/javascript'></script>
 </body>
