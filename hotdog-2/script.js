@@ -1,5 +1,3 @@
-
-
 const reviewsToggleBtn = document.querySelectorAll('.toggle-btn');
 
 

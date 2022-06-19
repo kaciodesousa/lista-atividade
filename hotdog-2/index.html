@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <!-- <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'> -->
 
 </head>
 
@@ -19,7 +19,7 @@
 
     <div class="scrollmenu">
         <a href="#1">Molho</a>
-        <a href="#news">Chapa</a>
+        <a href="#chapa">Chapa</a>
         <a href="#contact">Frango</a>
         <a href="#about">Hamburgue</a>
         <a href="#support">Sucos</a>
@@ -51,8 +51,8 @@
                             <small>4.5 (122)</small>
                         </div>
                         <button class="toggle-btn">
-              <i class="fas fa-chevron-down"></i>
-            </button>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
 
                     <div class="content-reviews">
@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -162,14 +162,16 @@
             </div>
             <!-- end of item -->
             <!-- item -->
-            <div class="item">
+            <div class="item" id="chapa">
                 <div class="img-container">
-                    <img src="images/fish-salad-dish.jpg" alt="food pic">
+                    <img src="images/eFWRUuR.jpg" alt="food pic">
                 </div>
                 <div class="content-container">
                     <div class="content-head">
                         <div>
-                            <h3>HOTDOG AO MOLHO</h3>
+                            <a onclick="ativar()">
+                                <h3>HOTDOG AO CHAPA</h3>
+                            </a>
                             <ul class="rating">
                                 <li><i class="fas fa-star"></i></li>
                                 <li><i class="fas fa-star"></i></li>
@@ -180,8 +182,8 @@
                             <small>4.5 (122)</small>
                         </div>
                         <button class="toggle-btn">
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
 
                     <div class="content-reviews">
@@ -200,7 +202,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -211,7 +213,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -233,7 +235,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -244,7 +246,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -266,7 +268,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -277,7 +279,7 @@
                                         </div>
                                         <div class="quantidade">
                                             <i class="fa fa-minus input-manulator"></i>
-                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0">
+                                            <input type="text" class="input-manulator" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="0" disabled>
                                             <i class="fa fa-plus input-manulator"></i>
                                         </div>
                                     </div>
@@ -292,6 +294,7 @@
             <!-- end of item -->
         </div>
     </div>
+
 
     <div class="footer">
         <p>Ver Pedido</p>
