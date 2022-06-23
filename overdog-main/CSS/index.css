@@ -80,7 +80,6 @@ h1 {
     align-items: center !important;
 }
 
-
 .linha {
     background-color: rgba(255, 217, 0, 0.3);
     margin-left: 0;
@@ -89,7 +88,7 @@ h1 {
 
 .add-produto {
     min-height: 25px;
-    background-color: #d5d4d4;
+    background-color: #f7f5f5;
     padding: 0px;
     margin: 0px;
     text-align: center;
@@ -97,7 +96,6 @@ h1 {
     align-items: center !important;
     font-family: 'Alfa Slab One';
     display: none;
-
 }
 
 .botao {
@@ -128,7 +126,6 @@ h1 {
 }
 
 @media (min-width: 450px) {
-
     #btEnviar {
         position: fixed;
         top: 4px;
@@ -166,30 +163,24 @@ h1 {
         padding-right: 14px;
         padding-top: 9px;
         padding-bottom: 9px;
-
     }
-
     .container,
     .container-sm {
         padding: 2px;
     }
-
     #conteudo {
         margin-top: 40px;
         margin-bottom: 50px;
     }
-
     h1 {
         padding-left: 2%;
         font-size: 30px;
     }
-
     .grupo h4 {
         font-size: 18px;
         border-bottom: #ffa347 solid 3px;
         border-left: #ffa347 solid 3px;
     }
-
     .descricao {
         font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
@@ -203,6 +194,7 @@ h1 span {
     padding-left: 10px;
     padding-bottom: 0px;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -225,7 +217,6 @@ h1 span {
 }
 
 @media (max-width: 450px) {
-
     .modal-janela {
         width: 100%;
     }
@@ -236,7 +227,6 @@ h1 span {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1

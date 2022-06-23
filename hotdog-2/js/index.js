@@ -16,10 +16,8 @@ function criar() {
         p = lsProduto[i];
 
         if (g != p.grupo) {
-            var grupo = document.createElement("div");
-            grupo.classList.add("grupo");
-            grupo.innerHTML = `<div class="img-container"><img src="images/fish-salad-dish.jpg" alt="food pic"></div><h3>${p.grupo}</h3>`;
-            document.getElementById("conteudo").appendChild(grupo);
+            var grupo = document.querySelector(".grupo");
+            grupo.innerHTML = `${p.grupo}`;
             g = p.grupo;
         }
 
