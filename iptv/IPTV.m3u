@@ -1,0 +1,24 @@
+#EXTM3U
+#PLAYLISTV: pltv-logo="http://goo.gl/vrZ3mg"
+
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/rede-globo-logo-1.png",GLOBO BRASILIA
+https://live-01.edge-vivo-si-df.video.globo.com/h/0401657725784771285598716576393841511704407ltYpMtl4BTya2FzlE6C9Ig/k/html5/a/F/u/ff33336a-a475-4beb-af78-92da440359e6/nu/globo-df/globo-df-audio_1=96000-video=2262976.m3u8
+
+#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo-3.png",RECORD
+https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist_.m3u8
+
+#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/sbt-logo-5.png",SBT    
+https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
+
+#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2018/06/cartoon-network-logo-11.png",CARTOON NETWORK
+http://ruwbe3.kkile1web.com/v3/youshi/m3_JlYXCiFjTPSy5oakKZdEVxBz_480p.m3u8?dev_limit=1&auth_id=8906788_com.global.brasiltvweb&client_ip=179.181.118.0&app_id=com.global.brasiltvweb&app_ver=10101&session_id=VC1iKMtfVnE5&user_id=8906788&main_addr=http://ruwbe3.kkile1web.com/v3/youshi/&dev_id=20f12342&spared_addr=http://testm3u8.fetewg1d.com/v3/youshi/&rst_status=0&expired=1657578767&token=CAF99716C8F7C5CF896BFA4808D0F43C&media_code=m3_JlYXCiFjTPSy5oakKZdEVxBz_480p
+
+#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2014/02/band-logo-2.png",BAND
+https://5cf4a2c2512a2.streamlock.net/rbatv/rbatv/chunklist_w2102620497.m3u8
+
+
+http://ruwbe3.kkile1web.com/v3/youshi//m1_TDMwn2WGBHS0CUpsbzhNfuo5_480p.m3u8?dev_limit=1&auth_id=8906788_com.global.brasiltvweb&client_ip=179.181.118.0&app_id=com.global.brasiltvweb&app_ver=10101&session_id=VC1iKMtfVnE5&user_id=8906788&main_addr=http://ruwbe3.kkile1web.com/v3/youshi/&dev_id=20f12342&spared_addr=http://testm3u8.fetewg1d.com/v3/youshi/&rst_status=0&expired=1657578767&token=CAF99716C8F7C5CF896BFA4808D0F43C&media_code=m1_TDMwn2WGBHS0CUpsbzhNfuo5_480p
+
+http://ruwbe3.kkile1web.com/v3/youshi//m1_TDMwn2WGBHS0CUpsbzhNfuo5_480p.m3u8?app_id=com.global.brasiltvweb&dev_limit=1&client_ip=179.181.118.0&user_id=8906788&session_id=ioyfX8wdWCWK&app_ver=10101&auth_id=8906788_com.global.brasiltvweb&rst_status=0&main_addr=http://ruwbe3.kkile1web.com/v3/youshi/&dev_id=20f12342&spared_addr=http://testm3u8.fetewg1d.com/v3/youshi/&expired=1657643871&token=EE7B7E0701286800B5D69721708CD8BC&media_code=m1_TDMwn2WGBHS0CUpsbzhNfuo5_480p

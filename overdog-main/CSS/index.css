@@ -1,3 +1,7 @@
+body {
+    padding-top: 10px;
+}
+
 h1 {
     font-family: 'Alfa Slab One';
     background-color: rgba(255, 217, 0, 1);
@@ -153,7 +157,7 @@ h1 {
         background-color: black;
         border-top: #ffa347 solid 3px;
         color: yellow;
-        /* height: 30px; */
+        height: 30px;
         font-family: 'Alfa Slab One';
         font-size: 25px;
         letter-spacing: 3px;
@@ -319,4 +323,10 @@ input[type=text] {
 
 .msg {
     font-size: 12px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
 }
