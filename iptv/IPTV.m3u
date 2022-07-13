@@ -3,14 +3,14 @@
 
 #EXTM3U
 
-#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/rede-globo-logo-1.png",GLOBO BRASILIA
+#EXTINF:-1 group-title="CANAL ABERTO" tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/rede-globo-logo-1.png",GLOBO BRASILIA
 https://live-01.edge-vivo-si-df.video.globo.com/h/0401657725784771285598716576393841511704407ltYpMtl4BTya2FzlE6C9Ig/k/html5/a/F/u/ff33336a-a475-4beb-af78-92da440359e6/nu/globo-df/globo-df-audio_1=96000-video=2262976.m3u8
 
-#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo-3.png",RECORD
+#EXTINF:-1 group-title="CANAL ABERTO" tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo-3.png",RECORD
 https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist_.m3u8
 
-#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/sbt-logo-5.png",SBT    
+#EXTINF:-1 group-title="CANAL ABERTO" tvg-logo="https://logodownload.org/wp-content/uploads/2013/12/sbt-logo-5.png",SBT    
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
 
-#EXTINF:-1 tvg-logo="https://logodownload.org/wp-content/uploads/2014/02/band-logo-2.png",BAND
+#EXTINF:-1 group-title="CANAL ABERTO" tvg-logo="https://logodownload.org/wp-content/uploads/2014/02/band-logo-2.png",BAND
 https://5cf4a2c2512a2.streamlock.net/rbatv/rbatv/chunklist_w2102620497.m3u8
